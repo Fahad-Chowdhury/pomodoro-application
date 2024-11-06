@@ -1,4 +1,5 @@
 # **Pomodoro Application**
+
 ## About
 A GUI application of Pomodoro timer developed in Python using the Tkinter package. It implements the Pomodoro technique, which is a time management method developed by Francesco Cirillo in the late 1980s. It breaks work into intervals, typically 25 minutes in length, separated by short breaks. Each interval is known as a pomodoro, from the Italian word for tomato.
 The Pomodoro technique has six steps:
