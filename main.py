@@ -39,7 +39,7 @@ class Pomodoro():
     def _setup_window(self):
         """ Setup the window. """
         self.window = tkinter.Tk()
-        self.window.title("Pomodoro")
+        self.window.title("Pomodoro Timer")
         self.window.config(padx=100, pady=50, bg=YELLOW)
 
     def _setup_timer_label(self):
@@ -108,15 +108,15 @@ class Pomodoro():
         if self.reps % 8 == 0:
             # Start timer for long break
             self._update_timer_label("Break", RED)
-            self.count_down(LONG_BREAK_MIN)
+            self.count_down(LONG_BREAK_MIN * 60)
         elif self.reps % 2 == 0:
             # Start timer for short break
             self._update_timer_label("Break", PINK)
-            self.count_down(SHORT_BREAK_MIN)
+            self.count_down(SHORT_BREAK_MIN * 60)
         else:
             # Start timer for work
             self._update_timer_label("Work", GREEN)
-            self.count_down(WORK_MIN)
+            self.count_down(WORK_MIN * 60)
 
     def count_down(self, count_seconds):
         """ Count down timer from given count_seconds to zero and update the timer label
@@ -129,8 +129,7 @@ class Pomodoro():
             self.timer = self.window.after(1000, self.count_down, count_seconds - 1)
         else:
             self._update_checkmarks_label()
-            if self.reps < 9:
-                self.start_timer()
+            self.start_timer()
 
 
 def main():
