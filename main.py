@@ -118,15 +118,15 @@ class Pomodoro():
             self._update_timer_label("Work", GREEN)
             self.count_down(WORK_MIN * 60)
 
-    def count_down(self, count_seconds):
-        """ Count down timer from given count_seconds to zero and update the timer label
-        each second. When count down is complete start the timer for the next cycle. """
-        count_minutes = math.floor(count_seconds / 60)
-        count_seconds = count_seconds % 60
+    def count_down(self, count):
+        """ Count down timer from given count to zero and update the timer label each
+        second. When count down is complete start the timer for the next cycle. """
+        count_minutes = math.floor(count / 60)
+        count_seconds = count % 60
         count_str = f"{count_minutes}:{count_seconds:02d}"
         self.canvas.itemconfig(self.timer_text, text=count_str)
-        if count_seconds > 0:
-            self.timer = self.window.after(1000, self.count_down, count_seconds - 1)
+        if count > 0:
+            self.timer = self.window.after(1000, self.count_down, count - 1)
         else:
             self._update_checkmarks_label()
             self.start_timer()
