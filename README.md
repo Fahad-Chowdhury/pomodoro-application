@@ -10,6 +10,7 @@ The Pomodoro technique has six steps:
 5. Go back to Step 2 and repeat until you complete four pomodori.
 6. After four pomodori are done, take a long break (typically 20 minutes) instead of a short break. Once the long break is finished, return to step 2.
 
+
 ## Developed Using:
 [Python](https://www.python.org/)
 
