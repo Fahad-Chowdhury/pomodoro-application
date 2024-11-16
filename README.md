@@ -22,4 +22,6 @@ The Pomodoro technique has six steps:
 ## Contact Information:
 Fahad Chowdhury\
 [LinkedIn](https://www.linkedin.com/in/fahad-chowdhury-fi)\
-[GitHub](https://github.com/Fahad-Chowdhury)
+[GitHub](https://github.com/Fahad-Chowdhury
+
+![Image Link](https://github.com/Fahad-Chowdhury/pomodoro-application/blob/main/pomodoro.JPG)
